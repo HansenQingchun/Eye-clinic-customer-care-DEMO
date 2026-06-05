@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>庆春眼科连锁诊所 · 客户服务平台</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">👁️</div>
+        <div class="brand-text">
+          <div class="brand-name">庆春眼科</div>
+          <div class="brand-sub">客户服务平台</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-ico">📊</span>工作台</button>
+        <button class="nav-item" data-view="customers"><span class="nav-ico">👥</span>客户管理</button>
+        <button class="nav-item" data-view="chat"><span class="nav-ico">💬</span>在线客服</button>
+        <button class="nav-item" data-view="appointments"><span class="nav-ico">📅</span>预约管理</button>
+        <button class="nav-item" data-view="tickets"><span class="nav-ico">🎫</span>服务工单</button>
+        <button class="nav-item" data-view="faq"><span class="nav-ico">📚</span>知识库</button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="agent-card">
+          <div class="agent-avatar">林</div>
+          <div>
+            <div class="agent-name">林晓客服</div>
+            <div class="agent-role">在线 · 客服专员</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主区域 -->
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="view-title">工作台</h1>
+          <p id="view-sub" class="muted">实时掌握诊所客户服务概况</p>
+        </div>
+        <div class="topbar-right">
+          <div class="search-box">
+            <span>🔍</span>
+            <input id="globalSearch" type="text" placeholder="搜索客户 / 工单 / 预约..." />
+          </div>
+          <button class="btn-primary" id="quickNew">＋ 新建</button>
+        </div>
+      </header>
+
+      <section class="content" id="content"><!-- 动态渲染 --></section>
+    </main>
+  </div>
+
+  <!-- 通用弹窗 -->
+  <div class="modal-mask" id="modalMask">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
